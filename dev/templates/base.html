@@ -1,77 +1,101 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title> CrashCourse - {{ title }} </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/static/layouts/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Crash Course</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet">
+   
 </head>
 
 <body>
-    <div class="w3-top">
-        <!-- Header -->
-        <div class="w3-bar w3-deep-purple w3-padding-16">
-            <a href="#" class="w3-bar-item w3-button w3-xlarge">Crash Course</a>
-            <div class="w3-bar-item" style="width:500px">
-                <input class="w3-input w3-bar-item" type="search" placeholder="Search" style="width:500px">
-            </div>
-            <a href="#" class="w3-bar-item w3-button w3-padding-16">
-                <i class="fa fa-search"></i>
-            </a>
-            <a href="#" class="w3-bar-item w3-button w3-right w3-padding-16">Log in</a>
-        </div>
-        <!-- Sidebar -->
-        <div class="w3-sidebar w3-indigo w3-bar-block" style="width:15.2%">
-            <a href="#" class="w3-bar-item w3-button">Home</a>
-            <a href="#" class="w3-bar-item w3-button">Category</a>
-            <a href="#" class="w3-bar-item w3-button">Become a Tutor</a>
-        </div>
+<nav class="navbar navbar-inverse">
+ <!-- Navbar content -->
+<div class="container-fluid">
+<div class="navbar-header">
+    <a class="navbar-brand" href="#">Crash Course</a>
+</div>
+  
+<ul class="nav navbar-nav">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">Category</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Browsing<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+        <li><a href="#">Page 1-1</a></li>
+      <li><a href="#">Page 1-2</a></li>
+      <li><a href="#">Page 1-3</a></li>
+      </ul>
+  </li>
+    <li> <a href="#"></a></li>
+    <li><a href="#"></a></li>
+</ul>
+
+  <!-- Search Bar -->
+  <form class="navbar-form navbar-left">
+  <div class="input-group">
+    <input type="text" class="form-control" placeholder="Search">
+    <div class="input-group-btn">
+      <button class="btn btn-default" type="submit">
+        <i class="glyphicon glyphicon-search"></i>
+      </button>
     </div>
-    <br><br><br><br>
-    <!-- Page Content -->
-    <div style="margin-left:17.5%">
-        <div class="w3-container">
-            {% block content%} {% endblock %}
-            <h2>Sidebar Navigation Example</h2>
-            <p>The sidebar with is set with "style="width:25%".</p>
-            <p>The left margin of the page content is set to the same value.</p>
-            <h2>Sidebar Navigation Example</h2>
-            <p>The sidebar with is set with "style="width:25%".</p>
-            <p>The left margin of the page content is set to the same value.</p>
-            <h2>Sidebar Navigation Example</h2>
-            <p>The sidebar with is set with "style="width:25%".</p>
-            <p>The left margin of the page content is set to the same value.</p>
-            <h2>Sidebar Navigation Example</h2>
-            <p>The sidebar with is set with "style="width:25%".</p>
-            <p>The left margin of the page content is set to the same value.</p>
-            <h2>Sidebar Navigation Example</h2>
-            <p>The sidebar with is set with "style="width:25%".</p>
-            <p>The left margin of the page content is set to the same value.</p>
-            <h2>Sidebar Navigation Example</h2>
-            <p>The sidebar with is set with "style="width:25%".</p>
-            <p>The left margin of the page content is set to the same value.</p>
-            <h2>Sidebar Navigation Example</h2>
-            <p>The sidebar with is set with "style="width:25%".</p>
-            <p>The left margin of the page content is set to the same value.</p>
-            <h2>Sidebar Navigation Example</h2>
-            <p>The sidebar with is set with "style="width:25%".</p>
-            <p>The left margin of the page content is set to the same value.</p>
-            <h2>Sidebar Navigation Example</h2>
-            <p>The sidebar with is set with "style="width:25%".</p>
-            <p>The left margin of the page content is set to the same value.</p>
-            <h2>Sidebar Navigation Example</h2>
-            <p>The sidebar with is set with "style="width:25%".</p>
-            <p>The left margin of the page content is set to the same value.</p>
-        </div>
-        <!-- Footer -->
-        <hr />
-        <footer>
-            <p>&copy; {{ year }} - CrashCourse</p>
-        </footer>
+  </div>
+  </form>
+  <!-- Camera  -->
+  <a href="#" class="btn btn-info btn-lg">
+        <span class="glyphicon glyphicon-facetime-video"></span> Start Your Live Stream
+    </a>
+    
+
+  <!-- Sign Up/Login -->
+  <ul class="nav navbar-nav navbar-right">
+    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+  </ul>
+</div>
+</nav>
+
+<center><h2>Best of the day</h2></center>
+<center><iframe width="300" height="300" src="https://www.youtube.com/embed/KDwh5UWsdbg?ecver=2">
+</iframe></center>
+
+<!-- Feature Videos -->
+<center><h2>Featured Courses</h2></center><br>
+<center>
+<iframe width="250" height="300" src="https://www.youtube.com/embed/TIWhhwOR_Kc?ecver=2">
+</iframe>
+
+<iframe width="250" height="300" src="https://www.youtube.com/embed/2ccaHpy5Ewo?ecver=2">
+</iframe>
+
+<iframe width="250" height="300" src="https://www.youtube.com/embed/RtU_mdL2vBM?ecver=2">
+</iframe>
+
+<iframe width="250" height="300" src="https://www.youtube.com/embed/TIWhhwOR_Kc?ecver=2">
+</iframe>
+
+<iframe width="250" height="300" src="https://www.youtube.com/embed/TIWhhwOR_Kc?ecver=2">
+</iframe>
+
+<iframe width="250" height="300" src="https://www.youtube.com/embed/TIWhhwOR_Kc?ecver=2">
+</iframe>
+
+<iframe width="250" height="300" src="https://www.youtube.com/embed/TIWhhwOR_Kc?ecver=2">
+</iframe>
+</center>
+{% block body_contents %}
+{% endblock %}
+
+<div class="footer">
+  <p>
+    <div class="text">
+      <u><a href="#" style="color: black">Contact Us</a></u>   
+      <u><a href="#" style="color: black">About Us</a></u><br>
     </div>
+   Developed by Crash Course Team
+  </p>
+</div>
 
 </body>
-
-</html>
+</html> 
