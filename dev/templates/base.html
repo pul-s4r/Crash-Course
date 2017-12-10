@@ -3,29 +3,73 @@
 
 <head>
     <meta charset="utf-8">
-    <title> CrashCourse - {{ title }}</title>
+    <title> CrashCourse - {{ title }} </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/static/layouts/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <!-- Sidebar -->
-    <div class="w3-container w3-indigo">
-        <h1>Crash Course</h1>
+    <div class="w3-top">
+        <!-- Header -->
+        <div class="w3-bar w3-deep-purple w3-padding-16">
+            <a href="#" class="w3-bar-item w3-button w3-xlarge">Crash Course</a>
+            <div class="w3-bar-item" style="width:500px">
+                <input class="w3-input w3-bar-item" type="search" placeholder="Search" style="width:500px">
+            </div>
+            <a href="#" class="w3-bar-item w3-button w3-padding-16">
+                <i class="fa fa-search"></i>
+            </a>
+            <a href="#" class="w3-bar-item w3-button w3-right w3-padding-16">Log in</a>
+        </div>
+        <!-- Sidebar -->
+        <div class="w3-sidebar w3-indigo w3-bar-block" style="width:15.2%">
+            <a href="#" class="w3-bar-item w3-button">Home</a>
+            <a href="#" class="w3-bar-item w3-button">Category</a>
+            <a href="#" class="w3-bar-item w3-button">Become a Tutor</a>
+        </div>
     </div>
-    <div class="w3-sidebar w3-indigo w3-bar-block" style="width:20%">
-        <a href="#" class="w3-bar-item w3-button">Home</a>
-        <a href="#" class="w3-bar-item w3-button">Category</a>
-        <a href="#" class="w3-bar-item w3-button">Become a Tutor</a>
-    </div>
+    <br><br><br><br>
     <!-- Page Content -->
-    <div style="margin-left:20%">
+    <div style="margin-left:17.5%">
         <div class="w3-container">
+            {% block content%} {% endblock %}
+            <h2>Sidebar Navigation Example</h2>
+            <p>The sidebar with is set with "style="width:25%".</p>
+            <p>The left margin of the page content is set to the same value.</p>
+            <h2>Sidebar Navigation Example</h2>
+            <p>The sidebar with is set with "style="width:25%".</p>
+            <p>The left margin of the page content is set to the same value.</p>
+            <h2>Sidebar Navigation Example</h2>
+            <p>The sidebar with is set with "style="width:25%".</p>
+            <p>The left margin of the page content is set to the same value.</p>
+            <h2>Sidebar Navigation Example</h2>
+            <p>The sidebar with is set with "style="width:25%".</p>
+            <p>The left margin of the page content is set to the same value.</p>
+            <h2>Sidebar Navigation Example</h2>
+            <p>The sidebar with is set with "style="width:25%".</p>
+            <p>The left margin of the page content is set to the same value.</p>
+            <h2>Sidebar Navigation Example</h2>
+            <p>The sidebar with is set with "style="width:25%".</p>
+            <p>The left margin of the page content is set to the same value.</p>
+            <h2>Sidebar Navigation Example</h2>
+            <p>The sidebar with is set with "style="width:25%".</p>
+            <p>The left margin of the page content is set to the same value.</p>
+            <h2>Sidebar Navigation Example</h2>
+            <p>The sidebar with is set with "style="width:25%".</p>
+            <p>The left margin of the page content is set to the same value.</p>
+            <h2>Sidebar Navigation Example</h2>
+            <p>The sidebar with is set with "style="width:25%".</p>
+            <p>The left margin of the page content is set to the same value.</p>
             <h2>Sidebar Navigation Example</h2>
             <p>The sidebar with is set with "style="width:25%".</p>
             <p>The left margin of the page content is set to the same value.</p>
         </div>
-
+        <!-- Footer -->
+        <hr />
+        <footer>
+            <p>&copy; {{ year }} - CrashCourse</p>
+        </footer>
     </div>
 
 </body>
