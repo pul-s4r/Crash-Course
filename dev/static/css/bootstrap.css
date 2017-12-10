@@ -4008,6 +4008,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   display: block;
   padding: 10px 15px;
+  font-size: 2em; /*Nam added to change font size*/ 
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -4189,9 +4190,10 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
-  min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
+  min-height: 100px; /*Added*/ 
+
 }
 @media (min-width: 768px) {
   .navbar {
@@ -4255,6 +4257,12 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-right: -15px;
   margin-left: -15px;
 }
+
+/*Added to change Logo color*/
+.container-fluid > .navbar-header > a{
+  color: green;
+}
+
 @media (min-width: 768px) {
   .container > .navbar-header,
   .container-fluid > .navbar-header,
@@ -4300,7 +4308,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 50px;
+  height: 50px; 
+
+  /*Added below for the logo*/
+  font-size: 3em;
+  text-shadow: 3px 2px red; 
+}
+a > .navbar-brand {
+  color: green;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -4351,7 +4366,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
+  top: 20px; /*Added to align nav bar*/
 }
+
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
@@ -4531,9 +4548,11 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-text {
   color: #777777;
 }
+
 .navbar-default .navbar-nav > li > a {
   color: #777777;
 }
+
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #333333;
@@ -4613,6 +4632,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #cccccc;
 }
 .navbar-inverse {
+
   background-color: #222222;
   border-color: #080808;
 }
