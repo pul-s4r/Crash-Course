@@ -30,6 +30,11 @@
 .text{
   font-size: medium;
 }
+
+#camera{
+  position: relative;
+  top: 20px;
+}
 /*End Extra*/
 
 html {
@@ -3256,6 +3261,7 @@ fieldset[disabled] .btn-success.focus {
   background-color: #5bc0de;
   border-color: #46b8da;
 }
+
 .btn-info:focus,
 .btn-info.focus {
   color: #ffffff;
@@ -3267,6 +3273,10 @@ fieldset[disabled] .btn-success.focus {
   background-color: #31b0d5;
   border-color: #269abc;
 }
+
+
+
+
 .btn-info:active,
 .btn-info.active,
 .open > .dropdown-toggle.btn-info {
@@ -4416,6 +4426,12 @@ a > .navbar-brand {
   margin-top: 8px;
   margin-bottom: 8px;
 }
+
+/*Added for search bar position*/
+.navbar-form > .input-group{
+  top:20px;
+}
+
 @media (min-width: 768px) {
   .navbar-form .form-group {
     display: inline-block;
