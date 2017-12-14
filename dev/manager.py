@@ -1,15 +1,27 @@
-from system import *
 from abc import ABCMeta
 from werkzeug.security import generate_password_hash
 from datetime import datetime
-
-db_command = DBCommand()
+from db import *
 
 class Manager(metaclass = ABCMeta):
-    """Abstract manager class"""
+    """Abstract manager class that contains functionality when interacting
+    with the database
+    """
     def __init__(self, db_session):
         super(Manager, self).__init__()
         self._db_session = db_session
+
+    """Adds row, commits and closes session"""
+    def add_row(self, session, row):
+        session.add(row)
+        session.commit()
+        session.close()
+
+    """Deletes row, commits and closes session"""
+    def delete_row(self, session, row):
+        session.delete(row)
+        session.commit()
+        session.close()
 
 class UserManager(Manager):
     """Handles User class"""
@@ -18,8 +30,11 @@ class UserManager(Manager):
         super(UserManager, self).__init__(db_session)
 
     def add_user(self, username, password, fname, lname, email, dob):
+        # Create a session
         session = self._db_session()
+        # Hashes password using PBKDF2
         hash_pw = generate_password_hash(password)
+        # Converts date format of dd/mm/YYYY to a date object
         dob = datetime.strptime(dob, "%d/%m/%Y").date()
         user = User(id = None,
                     username = username,
@@ -28,5 +43,10 @@ class UserManager(Manager):
                     lname = lname,
                     email = email,
                     dob = dob)
-        db_command.add_row(session, user)
+        self.add_row(session, user)
+
+    def query_user(self, username):
+        session = self._db_session()
+        user = session.query(User).filter(User.username == username).one()
+        session.close()
         return user
