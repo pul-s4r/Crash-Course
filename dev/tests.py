@@ -26,5 +26,8 @@ class TestAddUser(unittest.TestCase):
         self.assertEqual(user.get_email(), "khu.1998@icloud.com")
         self.assertEqual(user.get_dob(), "17/06/1998")
 
+    def test_add_empty_username(self):
+        pass
+
 if __name__ == '__main__':
     unittest.main()
