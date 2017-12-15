@@ -22,6 +22,7 @@ def home():
 def category():
 	return render_template("category.html")
 
+#Sign up form
 @app.route('/signup')
 def signup():
 	return render_template("signup.html")
