@@ -21,8 +21,9 @@ class User(Base, UserMixin):
     hash_pw = Column(String, nullable = False)
     fname = Column(String, nullable = False)
     lname = Column(String, nullable = False)
-    email = Column(String(320), nullable = False)
+    email = Column(String(320), nullable = False, unique = True)
     dob = Column(Date, nullable = False)
+    gender = Column(String, nullable = False)
 
     def get_id(self):
         return self.id
@@ -44,6 +45,9 @@ class User(Base, UserMixin):
 
     def get_dob(self):
         return self.dob.strftime("%d/%m/%Y")
+
+    def get_gender(self):
+        return self.gender
 
 """class Subscription(Base):
     Table that contains many to many

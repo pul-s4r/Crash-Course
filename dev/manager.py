@@ -30,7 +30,7 @@ class UserManager(Manager):
         # Calls superconstructor (Manager class constructor)
         super().__init__(db_session)
 
-    def add_user(self, username, password, fname, lname, email, dob):
+    def add_user(self, username, password, fname, lname, email, dob, gender):
         # Checks for empty field
         check_empty_field(username)
         check_empty_field(password)
@@ -38,6 +38,7 @@ class UserManager(Manager):
         check_empty_field(lname)
         check_empty_field(email)
         check_empty_field(dob)
+        check_empty_field(gender)
 
         # Checks for space in input
         check_spacebar(username)
@@ -55,7 +56,8 @@ class UserManager(Manager):
                     fname = fname,
                     lname = lname,
                     email = email,
-                    dob = dob)
+                    dob = dob,
+                    gender = gender)
         self._add_row(session, user)
 
     def query_user(self, username):
