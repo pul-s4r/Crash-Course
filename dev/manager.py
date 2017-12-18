@@ -65,3 +65,16 @@ class UserManager(Manager):
         user = session.query(User).filter(User.username == username).one()
         session.close()
         return user
+
+class SubscriptionManager(Manager):
+    """Handles User class"""
+    def __init__(self, db_session):
+        # Calls superconstructor (Manager class constructor)
+        super().__init__(db_session)
+
+    def subscribe(self, user_id, channel_id, subscribe_date):
+        session = self._db_session()
+        subscription = Subscription(subscriber_id = user_id,
+                                    channel_id = channel_id,
+                                    subscribe_date = subscribe_date)
+        self._add_row(session, subscription)

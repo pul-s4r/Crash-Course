@@ -159,5 +159,37 @@ class TestAddUser(unittest.TestCase):
                                               "17/07/1998",
                                               "Male1")
 
+class TestSubscribe(unittest.TestCase):
+    """Creates the database schema on initialization"""
+    def setUp(self):
+        self.system = System()
+
+    """Removes the database schema once complete tests"""
+    def tearDown(self):
+        os.remove("crash_course.db")
+
+    def test_subscribe(self):
+        self.system.user_manager.add_user("Khu",
+                                          "password",
+                                          "Kent",
+                                          "Hu",
+                                          "khu.1998@icloud.com",
+                                          "17/06/1998",
+                                          "Male")
+        self.system.user_manager.add_user("username",
+                                          "password",
+                                          "John",
+                                          "Doe",
+                                          "JohnDoe@icloud.com",
+                                          "17/06/1998",
+                                          "Male")
+
+        user = self.system.user_manager.query_user("Khu")
+        channel = self.system.user_manager.query_user("username")
+
+        self.system.subscription_manager.subscribe(user.get_id(),
+                                                   channel.get_id(),
+                                                   date.today())
+
 if __name__ == '__main__':
     unittest.main()
