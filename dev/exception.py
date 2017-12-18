@@ -5,3 +5,7 @@ class Error(Exception):
 class EmptyFieldError(Error):
     """Raised when nothing is passed into required text fields"""
     pass
+
+class SpaceError(Error):
+    """Raised when space is not allowed in input"""
+    pass

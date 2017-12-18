@@ -4,9 +4,7 @@ while True:
     print()
     print("Input string is: {}".format(val))
     print()
-    if not val:
-        print("Empty string")
-    elif " "in val:
-        print("Not allowed space")
-    elif val.isspace:
-        print("Whitespaces and tabs")
+    if " " in val:
+        print("Not allowed spaces in username")
+    elif not val:
+        print("Please input a username")

@@ -2,7 +2,7 @@ from abc import ABCMeta
 from werkzeug.security import generate_password_hash
 from datetime import datetime
 from db import *
-from exception import EmptyFieldError
+from input_validation import check_empty_field, check_spacebar
 
 class Manager(metaclass = ABCMeta):
     """Abstract manager class that contains functionality when interacting
@@ -31,8 +31,17 @@ class UserManager(Manager):
         super().__init__(db_session)
 
     def add_user(self, username, password, fname, lname, email, dob):
-        if not username:
-            raise EmptyFieldError
+        # Checks for empty field
+        check_empty_field(username)
+        check_empty_field(password)
+        check_empty_field(fname)
+        check_empty_field(lname)
+        check_empty_field(email)
+        check_empty_field(dob)
+
+        # Checks for space in input
+        check_spacebar(username)
+        check_spacebar(email)
 
         # Create a session
         session = self._db_session()
