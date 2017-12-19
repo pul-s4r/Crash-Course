@@ -14,148 +14,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-
-/*Extra */
-.footer {
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   height: 7%;
-   background-color: grey;
-   color: white;
-   text-align: center;
-}
-
-.text{
-  font-size: medium;
-}
-
-#camera{
-  position: relative;
-  top: 20px;
-}
-
-/* Full-width input fields */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-button:hover {
-    opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-/* Center the image and position the close button */
-.imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-    position: relative;
-}
-
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
-
-.container {
-    padding: 16px;
-}
-
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 25px;
-    top: 0;
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
-    
-@keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-}
-/*End Extra*/
-
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -3380,7 +3238,6 @@ fieldset[disabled] .btn-success.focus {
   background-color: #5bc0de;
   border-color: #46b8da;
 }
-
 .btn-info:focus,
 .btn-info.focus {
   color: #ffffff;
@@ -3392,10 +3249,6 @@ fieldset[disabled] .btn-success.focus {
   background-color: #31b0d5;
   border-color: #269abc;
 }
-
-
-
-
 .btn-info:active,
 .btn-info.active,
 .open > .dropdown-toggle.btn-info {
@@ -4137,7 +3990,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   position: relative;
   display: block;
   padding: 10px 15px;
-  font-size: 2em; /*Nam added to change font size*/ 
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -4319,10 +4171,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar {
   position: relative;
+  min-height: 50px;
   margin-bottom: 20px;
   border: 1px solid transparent;
-  min-height: 100px; /*Added*/ 
-
 }
 @media (min-width: 768px) {
   .navbar {
@@ -4386,12 +4237,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   margin-right: -15px;
   margin-left: -15px;
 }
-
-/*Added to change Logo color*/
-.container-fluid > .navbar-header > a{
-  color: green;
-}
-
 @media (min-width: 768px) {
   .container > .navbar-header,
   .container-fluid > .navbar-header,
@@ -4437,14 +4282,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 15px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 50px; 
-
-  /*Added below for the logo*/
-  font-size: 3em;
-  text-shadow: 3px 2px red; 
-}
-a > .navbar-brand {
-  color: green;
+  height: 50px;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -4495,9 +4333,7 @@ a > .navbar-brand {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
-  top: 20px; /*Added to align nav bar*/
 }
-
 @media (max-width: 767px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
@@ -4539,18 +4375,12 @@ a > .navbar-brand {
   margin-right: -15px;
   padding: 10px 15px;
   border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;s
+  border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   margin-top: 8px;
   margin-bottom: 8px;
 }
-
-/*Added for search bar position*/
-.navbar-form  > .input-group {
-  top:20px;
-}
-
 @media (min-width: 768px) {
   .navbar-form .form-group {
     display: inline-block;
@@ -4683,11 +4513,9 @@ a > .navbar-brand {
 .navbar-default .navbar-text {
   color: #777777;
 }
-
 .navbar-default .navbar-nav > li > a {
   color: #777777;
 }
-
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #333333;
@@ -4767,7 +4595,6 @@ fieldset[disabled] .navbar-default .btn-link:focus {
   color: #cccccc;
 }
 .navbar-inverse {
-
   background-color: #222222;
   border-color: #080808;
 }
